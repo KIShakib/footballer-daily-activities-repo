@@ -1,0 +1,50 @@
+[
+  {
+    "id": 123,
+    "name": "GOAL KICK",
+    "position": "Goalkeeper",
+    "time": 60,
+    "img": "./Images/goal-kick.jpg",
+    "description": "To take a goal kick, first, place the ball on the edge of the goal area. Then, step back from the ball and decide where you want the ball to land after kicking it. Next, focus on your run and technique as you strike the ball with your foot and watch it to see that it arrives where you intended it to on the field."
+  },
+  {
+    "id": 456,
+    "name": "SLIDING TACKLE",
+    "position": "Defender",
+    "time": 10,
+    "img": "./Images/sliding-tackle.jpg",
+    "description": "Slide with your leg closest to the ball. This will get your foot to the ball faster versus using your foot farthest away from the ball. Lock your ankle and curl your foot back towards your shin. This creates the “hook” in your foot to steal the ball."
+  },
+  {
+    "id": 789,
+    "name": "HIGH PRESS",
+    "position": "Defensive Mid",
+    "time": 40,
+    "img": "Images/high-press.jpg",
+    "description": "A high press strategy requires the team to play with a sweeper/keeper method, putting a lot of pressure on the keeper and the central defender. Beating this strategy is all about effective counter attacking."
+  },
+  {
+    "id": 987,
+    "name": "THROUGH BALL",
+    "position": "Attacking Mid",
+    "time": 15,
+    "img": "Images/through-pass.jpg",
+    "description": "A through-ball is a pass into open space between two defenders for an attacker to receive the ball behind the defenders."
+  },
+  {
+    "id": 654,
+    "name": "FREE KICK",
+    "position": "Forward",
+    "time": 45,
+    "img": "Images/free-kick.jpg",
+    "description": "Using a dummy for a free kick involves playing the ball through the legs of one of your attackers to the other side of the pitch where the defence is less organised. I am surprised at how often teams can be given a free-kick, which is headed away by the first defender and the attacking team is suddenly caught out and find themselves under pressure from a counter attack."
+  },
+  {
+    "id": 321,
+    "name": "PENALTY KICK",
+    "position": "Forward",
+    "time": 45,
+    "img": "Images/penalty.jpg",
+    "description": "Place the ball with your hands on a good piece of grass 12 yards away from goal. Don't set it up using your foot. Make sure it's perfect by using your hands. Pass the ball hard and low in the corner of the goal using the inside of your foot. Aim for inside of the post, but not to close to the post, to give you some room to be a bit off target wide and still have the ball go in the side netting."
+  }
+]
