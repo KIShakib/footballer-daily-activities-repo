@@ -3,7 +3,7 @@ import logo from '../Image/bg2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 
-const Detail = () => {
+const Detail = ({activitiesTime}) => {
     return (
         <div>
             <div className="my-info-div mt-10 pb-8 rounded bg-slate-700 shadow-xl w-96 ml-3">
@@ -48,7 +48,7 @@ const Detail = () => {
                     <h3 className='text-2xl mt-8 mx-6'>Activities Details</h3>
                 </div>
                 <div className="flex flex-row justify-around mt-5 bg-slate-800 mx-6 rounded p-5">
-                    <h4>Total Activities Time: 200</h4>
+                    <h4>Total Activities Time: {activitiesTime} sec</h4>
                 </div>
                 <div className="flex flex-row justify-around mt-5 bg-slate-800 mx-6 rounded p-5">
                     <h4>Break Time: 20</h4>

@@ -1,7 +1,7 @@
 import React from 'react';
 import './Activity.css';
 
-const Activity = ({ activity }) => {
+const Activity = ({ activity, selectedActivities }) => {
     const { img, name, position, time, description } = activity;
     return (
         <div>
@@ -21,7 +21,7 @@ const Activity = ({ activity }) => {
                         <div className="badge badge-outline">{time} Sec</div>
                     </div>
                     <div className='flex justify-center'>
-                        <button className="btn btn-outline btn-secondary btn-sm w-72">Add To-Do List</button>
+                        <button onClick={() => selectedActivities(activity.time)} className="btn btn-outline btn-secondary btn-sm w-72">Add To-Do List</button>
                     </div>
                 </div>
             </div>
