@@ -1,9 +1,10 @@
 import './App.css';
+import Navbar from './Components/Navbar/Navbar';
 
 function App() {
   return (
     <div>
-      <h1>Test that everything is connected.</h1>
+      <Navbar></Navbar>
     </div>
   );
 }
