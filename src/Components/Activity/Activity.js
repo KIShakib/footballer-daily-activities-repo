@@ -5,7 +5,7 @@ const Activity = ({ activity, selectedActivities }) => {
     const { img, name, position, time, description } = activity;
     return (
         <div>
-            <div className="card w-full h-[450px] bg-slate-700 shadow-xl">
+            <div className="card w-full h-[450px] bg-slate-700 shadow-xl mb-4">
                 <figure><img src={img} className="card-img pt-7" alt="Shoes" /></figure>
                 <div className="card-body flex justify-between">
                     <div>

@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import logo from '../Image/bg2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
+import toast, { Toaster } from 'react-hot-toast';
 
-let brTime;
+const success = () => toast.success('Successfuly Done!! Congratulations...');
+
 const Detail = ({ activitiesTime }) => {
     const [activitiesBreakTime, setActivitiesBreakTime] = useState(0);
+
     const breakTime = (time) => {
         localStorage.setItem('break-time', time);
-
         const getFromLs = localStorage.getItem('break-time');
-        brTime = getFromLs;
-        setActivitiesBreakTime(brTime);
+        setActivitiesBreakTime(getFromLs);
     }
+
     return (
+        
         <div>
-            <div className="my-info-div mt-10 pb-8 rounded bg-slate-700 shadow-xl w-96 ml-3">
+            <div className="my-info-div mt-10 pb-8 rounded bg-slate-700 shadow-xl w-full lg:ml-3">
                 <div className="flex flex-row justify-around pt-5">
                     <figure className=' w-[30%]'>
                         <img src={logo} alt="Shoes" className="rounded-xl" />
@@ -60,10 +63,11 @@ const Detail = ({ activitiesTime }) => {
                     <h4>Total Activities Time: {activitiesTime} sec</h4>
                 </div>
                 <div className="flex flex-row justify-around mt-5 bg-slate-800 mx-6 rounded p-5">
-                    <h4>Break Time: {brTime} sec</h4>
+                    <h4>Break Time: {activitiesBreakTime} sec</h4>
                 </div>
                 <div className='flex justify-center mt-6'>
-                    <button className="btn btn-outline btn-secondary">Activities Completed</button>
+                    <button onClick={success} className="btn btn-outline btn-secondary">Activities Completed</button>
+                    <Toaster></Toaster>
                 </div>
             </div>
         </div>
