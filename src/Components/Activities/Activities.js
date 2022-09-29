@@ -14,14 +14,14 @@ const Activities = ({ setActivitiesTime }) => {
     }, []);
 
 
-    
-    const selectedActivities = (activityTime) =>{
+
+    const selectedActivities = (activityTime) => {
         selectedArray.push(activityTime);
         const totalTime = selectedArray.reduce((init, cost) => {
             return (parseInt(init) + parseInt(cost));
         }, 0);
         actiTotalTime = totalTime;
-        setActivitiesTime(actiTotalTime);  
+        setActivitiesTime(actiTotalTime);
     };
 
     return (

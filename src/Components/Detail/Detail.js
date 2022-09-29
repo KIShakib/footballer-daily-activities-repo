@@ -11,19 +11,19 @@ const Detail = ({ activitiesTime }) => {
 
     const breakTime = (time) => {
         setActivitiesBreakTime(time);
-        localStorage.setItem('break-time', JSON.stringify(time));   
+        localStorage.setItem('break-time', JSON.stringify(time));
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         const getFromLs = localStorage.getItem('break-time');
         const getFromLsParse = JSON.parse(getFromLs);
-        if(getFromLs){
+        if (getFromLs) {
             setActivitiesBreakTime(getFromLsParse);
         };
-    },[]);
+    }, []);
 
     return (
-        
+
         <div>
             <div className="my-info-div mt-10 pb-8 rounded bg-slate-700 shadow-xl w-full lg:ml-3">
                 <div className="flex flex-row justify-around pt-5">
