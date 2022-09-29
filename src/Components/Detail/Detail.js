@@ -1,19 +1,26 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import logo from '../Image/bg2.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import toast, { Toaster } from 'react-hot-toast';
 
-const success = () => toast.success('Successfuly Done!! Congratulations...');
+const success = () => toast.success('Successfully Done!! Congratulations...');
 
 const Detail = ({ activitiesTime }) => {
     const [activitiesBreakTime, setActivitiesBreakTime] = useState(0);
 
     const breakTime = (time) => {
-        localStorage.setItem('break-time', time);
-        const getFromLs = localStorage.getItem('break-time');
-        setActivitiesBreakTime(getFromLs);
+        setActivitiesBreakTime(time);
+        localStorage.setItem('break-time', JSON.stringify(time));   
     }
+
+    useEffect(()=>{
+        const getFromLs = localStorage.getItem('break-time');
+        const getFromLsParse = JSON.parse(getFromLs);
+        if(getFromLs){
+            setActivitiesBreakTime(getFromLsParse);
+        };
+    },[]);
 
     return (
         
