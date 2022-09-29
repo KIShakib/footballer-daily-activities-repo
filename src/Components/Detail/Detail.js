@@ -70,7 +70,7 @@ const Detail = ({ activitiesTime }) => {
                     <h4>Total Activities Time: {activitiesTime} sec</h4>
                 </div>
                 <div className="flex flex-row justify-around mt-5 bg-slate-800 mx-6 rounded p-5">
-                    <h4>Break Time: {activitiesBreakTime} sec</h4>
+                    <h4>Break Time: {activitiesBreakTime} Min</h4>
                 </div>
                 <div className='flex justify-center mt-6'>
                     <button onClick={success} className="btn btn-outline btn-secondary">Activities Completed</button>
