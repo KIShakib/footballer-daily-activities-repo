@@ -1,9 +1,18 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from '../Image/bg2.png';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 
-const Detail = ({activitiesTime}) => {
+let brTime;
+const Detail = ({ activitiesTime }) => {
+    const [activitiesBreakTime, setActivitiesBreakTime] = useState(0);
+    const breakTime = (time) => {
+        localStorage.setItem('break-time', time);
+
+        const getFromLs = localStorage.getItem('break-time');
+        brTime = getFromLs;
+        setActivitiesBreakTime(brTime);
+    }
     return (
         <div>
             <div className="my-info-div mt-10 pb-8 rounded bg-slate-700 shadow-xl w-96 ml-3">
@@ -37,12 +46,12 @@ const Detail = ({activitiesTime}) => {
                     <h3 className='text-2xl mt-5 mx-6'>Add A Break</h3>
                 </div>
                 <div className="flex flex-row justify-around mt-5 bg-slate-800 mx-6 rounded p-5">
-                    <button className="btn btn-outline btn-secondary btn-circle mr-1">10</button>
-                    <button className="btn btn-outline btn-secondary btn-circle mr-1">20</button>
-                    <button className="btn btn-outline btn-secondary btn-circle mr-1">30</button>
-                    <button className="btn btn-outline btn-secondary btn-circle mr-1">40</button>
-                    <button className="btn btn-outline btn-secondary btn-circle mr-1">50</button>
-                    <button className="btn btn-outline btn-secondary btn-circle mr-1">60</button>
+                    <button onClick={() => breakTime(10)} className="btn btn-outline btn-secondary btn-circle mr-1">10</button>
+                    <button onClick={() => breakTime(20)} className="btn btn-outline btn-secondary btn-circle mr-1">20</button>
+                    <button onClick={() => breakTime(30)} className="btn btn-outline btn-secondary btn-circle mr-1">30</button>
+                    <button onClick={() => breakTime(40)} className="btn btn-outline btn-secondary btn-circle mr-1">40</button>
+                    <button onClick={() => breakTime(50)} className="btn btn-outline btn-secondary btn-circle mr-1">50</button>
+                    <button onClick={() => breakTime(60)} className="btn btn-outline btn-secondary btn-circle mr-1">60</button>
                 </div>
                 <div>
                     <h3 className='text-2xl mt-8 mx-6'>Activities Details</h3>
@@ -51,7 +60,7 @@ const Detail = ({activitiesTime}) => {
                     <h4>Total Activities Time: {activitiesTime} sec</h4>
                 </div>
                 <div className="flex flex-row justify-around mt-5 bg-slate-800 mx-6 rounded p-5">
-                    <h4>Break Time: 20</h4>
+                    <h4>Break Time: {brTime} sec</h4>
                 </div>
                 <div className='flex justify-center mt-6'>
                     <button className="btn btn-outline btn-secondary">Activities Completed</button>
